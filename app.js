@@ -7,7 +7,6 @@ require("./config/mongoose")
 const userrouter = require("./router/userrouter");
 const passport = require("passport");
 
-
 app.use(passport.initialize());
 require("./config/passport")
 

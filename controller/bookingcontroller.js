@@ -34,14 +34,11 @@ const bookingTicket = async (req, res) => {
     }
 };
 
-
-
-
-const getAllEvent = async (req, res) => {
+const getAllBooking = async (req, res) => {
     try {
-        const findalldata = await event.find({})
+        const findalldata = await booking.find({})
         if (findalldata) {
-            return res.status(200).json({ message: "Event found Success", data: findalldata });
+            return res.status(200).json({ message: "Booking found Success", data: findalldata });
         }
         else {
             return res.status(404).json({ message: "No Data Found" });
@@ -52,11 +49,11 @@ const getAllEvent = async (req, res) => {
     }
 }
 
-const getAllEventById = async (req, res) => {
+const getAllBookingById = async (req, res) => {
     try {
-        const findalldata = await event.findById(req.params.id)
+        const findalldata = await booking.findById(req.params.id)
         if (findalldata) {
-            return res.status(200).json({ message: "Event found Success", data: findalldata });
+            return res.status(200).json({ message: "Booking found Success", data: findalldata });
         }
         else {
             return res.status(404).json({ message: "No Data Found" });
@@ -70,6 +67,6 @@ const getAllEventById = async (req, res) => {
 
 module.exports = {
     bookingTicket,
-    getAllEvent,
-    getAllEventById,
+    getAllBooking,
+    getAllBookingById,
 }

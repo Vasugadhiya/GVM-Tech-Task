@@ -16,6 +16,10 @@ router.get("/allEvent", verify, eventcontroller.getAllEvent);
 router.get("/getAllEventById/:id", verify, eventcontroller.getAllEventById);
 
 router.post("/bookingTicket", bookingcontroller.bookingTicket);
+router.get("/getAllBooking", verify, bookingcontroller.getAllBooking);
+router.get("/getAllBookingById/:id", verify, bookingcontroller.getAllBookingById);
+
+
 
 
 
